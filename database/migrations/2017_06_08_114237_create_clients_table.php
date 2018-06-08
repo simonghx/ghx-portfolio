@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titre', 255);
-            $table->text('desc');
-            $table->string('image',255)->nullable();
-            $table->unsignedInteger('client_id');
+            $table->string('company', 255);
+            $table->string('logo', 255)->nullable();
             $table->timestamps();
-            $table->foreign('client_id')->references('id')->on('clients');
         });
     }
 
@@ -31,6 +28,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('clients');
     }
 }

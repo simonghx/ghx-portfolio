@@ -14,10 +14,10 @@ class CreateProjectTech extends Migration
     public function up()
     {
         Schema::create('project_tech', function (Blueprint $table) {
-            $table->integer('technology_id')->unsigned()->index();
-            $table->foreign('technology_id')->references('id')->on('technologies')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('project_id')->unsigned()->index();
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('technology_id')->unsigned();
+            $table->foreign('technology_id')->references('id')->on('technologies');//->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('project_id')->unsigned();
+            $table->foreign('project_id')->references('id')->on('projects');//->onDelete('cascade')->onUpdate('cascade');
 
             
             

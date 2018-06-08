@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     public function projects(){
-        $this->hasMany('App\Project', 'client_id', 'id');
+        return $this->hasMany('App\Project', 'client_id', 'id');
 
     }
+
 }

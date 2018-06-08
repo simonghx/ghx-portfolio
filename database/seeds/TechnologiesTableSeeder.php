@@ -12,7 +12,16 @@ class TechnologiesTableSeeder extends Seeder
     public function run()
     {
         App\Technology::create([
-            'nom' => 'Laravel',a
+            'nom' => 'Laravel',
         ]);
+        App\Technology::create([
+            'nom' => 'WordPress',
+        ]);
+        App\Technology::create([
+            'nom' => 'VueJS',
+        ]);
+
+      
     }
 }
+

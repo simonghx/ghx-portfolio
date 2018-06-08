@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     public function clients(){
-        $this->belongsTo('App\Client', 'client_id', 'id');
+        return $this->belongsTo('App\Client', 'client_id', 'id');
 
     }
     public function technologies(){
-        $this->belongsToMany('App\Technology');
+        return $this->belongsToMany('App\Technology', 'project_tech', 'project_id', 'technology_id' );
     }
 }

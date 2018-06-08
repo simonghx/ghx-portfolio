@@ -1,0 +1,17 @@
+HTTrack3.49-2 launched on Thu, 31 May 2018 09:44:11 at http://theme.nileforest.com/html/apollo-v1.3/index-static_light.html
+(winhttrack http://theme.nileforest.com/html/apollo-v1.3/index-static_light.html -O "/home/simonghx/websites/theme-apollo" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:55:18	Warning: 	file not stored in cache due to bogus state (broken size, expected 4938039 got 1664736): theme.nileforest.com/html/apollo-v1.3/media/Working-Space.mp4
+09:58:20	Warning: 	Retry after error -4 (Incorrect length (1664736 Bytes, 4938039 expected)) at link theme.nileforest.com/html/apollo-v1.3/media/Working-Space.mp4 (from theme.nileforest.com/html/apollo-v1.3/index-video_bg.html)
+09:58:21	Error: 	"Not Found" (404) at link theme.nileforest.com/html/apollo-v1.3/css/plugins/grabbing.png (from theme.nileforest.com/html/apollo-v1.3/css/plugins/owl.carousel.css)
+09:58:21	Error: 	"Not Found" (404) at link theme.nileforest.com/html/apollo-v1.3/css/plugins/AjaxLoader.gif (from theme.nileforest.com/html/apollo-v1.3/css/plugins/owl.carousel.css)
+10:01:17	Warning: 	file not stored in cache due to bogus state (broken size, expected 4938039 got 3874620): theme.nileforest.com/html/apollo-v1.3/media/Working-Space.mp4
+10:01:17	Warning: 	Retry after error -4 (Incorrect length (3874620 Bytes, 4938039 expected)) at link theme.nileforest.com/html/apollo-v1.3/media/Working-Space.mp4 (from theme.nileforest.com/html/apollo-v1.3/index-video_bg.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 18 minutes 28 seconds : 259 links scanned, 254 files written (21029407 bytes overall) [21086653 bytes received at 19031 bytes/sec]
+(2 errors, 4 warnings, 0 messages)

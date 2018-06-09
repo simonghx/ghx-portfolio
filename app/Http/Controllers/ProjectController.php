@@ -14,8 +14,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projets = Project::all();
-        return view('admin.projets.index', compact('projets'));
+        $projects = Project::with('clients', 'technologies')->get()->sortByDesc('created_at');
+        // $projects = Project::all();
+        return view('admin.projets.index', compact('projects'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projets.create');
     }
 
     /**
@@ -36,7 +37,13 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Project;
+        $project->titre = $request->titre;
+        $project->desc = $request->desc;
+        $project->client_id = 1;
+        // $project->technologies = rand(1,3);
+        $project->save();
+        return redirect()->route('projets.index');
     }
 
     /**
@@ -47,7 +54,9 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('admin.projets.show', compact('projet'));
+        
+        return view('admin.projets.show', compact('project'));
+        
     }
 
     /**

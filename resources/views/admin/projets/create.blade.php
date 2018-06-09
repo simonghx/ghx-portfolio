@@ -1,11 +1,59 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'Admin - Création de projet')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Ajout de projet</h1>
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+<div class="row">
+    <div class="col-md-8">
+        <div class="box">
+            
+            <div class="box-body">
+                <form action="{{route('projets.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
+
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"> 
+                  <div class="form-group">
+                    <label for="titre">Titre du projet :</label>
+                    @if($errors->has('titre'))
+                    <div class="text-danger">{{$errors->first('titre')}}</div>
+                    @endif
+                  <input type="text" name="titre" id="titre" class="form-control {{$errors->has('titre')?'border-danger':''}}" placeholder="Le titre du post" value="{{old('titre')}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Description du projet :</label>
+                    @if($errors->has('desc'))
+                    {{-- @foreach($errors->get('contenu') as $error) --}}
+                <div class="text-danger">{{$errors->first('desc')}}</div>
+                {{-- @endforeach --}}
+                @endif
+                <textarea class="form-control {{$errors->has('desc')?'border-danger':''}}" name="desc" id="desc" rows="3">{{old('contenu')}}</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <img src="" alt="">
+                    @if($errors->has('image'))
+                        @foreach($errors->get('image') as $error)
+                        <div class="text-danger">{{$error}}</div>
+                        @endforeach
+                    @endif
+                    <div class="custom-file"  data-bsfileupload>
+                        <label class="custom-file-label" for="customFile">Uploader une image</label>
+                        <input name="image" type="file" class="custom-file-input" id="customFile">
+                    </div>
+                    
+                </div>
+                  <button type="submit" class="btn btn-warning">Créer</button>
+                    <a name="" id="" class="btn btn-danger" href="{{route('projets.index')}}" role="button">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
 @stop
+
+{{-- @push('js')
+<script src="{{asset('js/lib/bstrp-change-file-input-value.js')}}"></script>
+@endpush --}}

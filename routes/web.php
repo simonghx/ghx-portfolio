@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/admin/projets',  'ProjectController')->middleware('auth');
+Route::resource('/admin/projets', 'ProjectController')->middleware('auth');

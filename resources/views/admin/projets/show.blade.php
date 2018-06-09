@@ -1,17 +1,25 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'Admin - Projet')
 
 @section('content_header')
-  <h1>{{$projet->titre}}</h1>
+  <h1>Page projet</h1>
 @stop
 
 @section('content')
 <div class="row">
   <div class="col-md-8">
     <div class="box">
+      <div class="box-header">
+        <h3>{{$project->titre}}</h3>
+      </div>
       <div class="box-body">
-        {{$projet->desc}}
+        <p>{{$project->desc}}</p>
+      </div>
+      <div class="box-footer">
+      
+        {{-- <span class="badge badge-dark">{{$project->technologies->nom}}</span> --}}
+        
       </div>
     </div>
   </div>
@@ -21,11 +29,11 @@
         Actions
       </div>
       <div class="box-body">
-        <a name="" id="" class="btn btn-warning" href="{{route('projets.edit',  ['projet'=>$projet->id])}}" role="button">Modifier</a>
-        <form action="{{route('projets.destroy',  ['projet'=>$projet->id])}}" method="POST">
+        <a name="" id="" class="btn btn-warning" href="{{route('projets.edit',  ['project'=>$project->id])}}" role="button">Modifier</a>
+        <form class="d-inline" action="{{route('projets.destroy',  ['project' =>$project->id])}}" method="POST">
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-warning"  role="button">Supprimer</button>
+          <button type="submit" class="btn btn-danger"  role="button">Supprimer</button>
         </form>
       </div>
     </div>

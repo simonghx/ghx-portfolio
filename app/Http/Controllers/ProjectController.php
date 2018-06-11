@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Technology;
 use Illuminate\Http\Request;
+use App\Services\ImageResizing;
 
 class ProjectController extends Controller
 {
+    public function __construct(ImageResizing  $imageResizing){
+        $this->imageResizing = $imageResizing;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -24,8 +30,9 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Technology $technologies)
     {
+        $technologies = Technology::all();
         return view('admin.projects.create');
     }
 
@@ -40,7 +47,13 @@ class ProjectController extends Controller
         $project = new Project;
         $project->titre = $request->titre;
         $project->desc = $request->desc;
+        if ($request->image != null) {   
+
+            $project->image = $this->imageResizing->imageStore($request->image);
+
+        }
         $project->client_id = 1;
+
         $project->save();
         return redirect()->route('projects.index');
     }
@@ -79,6 +92,12 @@ class ProjectController extends Controller
     {
         $project->titre = $request->titre;
         $project->desc = $request->desc;
+        if ($request->image != null) {   
+
+            $this->imageResizing->imageDelete($project->image);
+            $project->image = $this->imageResizing->imageStore($request->image);
+
+        }
         $project->client_id = 1;
         $project->save();
         return redirect()->route('projects.show', ['project' => $project->id]);

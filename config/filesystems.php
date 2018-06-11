@@ -48,10 +48,22 @@ return [
             'root' => storage_path('app'),
         ],
 
-        'public' => [
+        'images' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => storage_path('app/images'),
+            'url' => env('APP_URL').'/storage/images',
+            'visibility' => 'public',
+        ],
+        'thumbnails' => [
+            'driver' => 'local',
+            'root' => storage_path('app/thumbnails'),
+            'url' => env('APP_URL').'/storage/thumbnails',
+            'visibility' => 'public',
+        ],
+        'miniature' => [
+            'driver' => 'local',
+            'root' => storage_path('app/miniature'),
+            'url' => env('APP_URL').'/storage/miniature',
             'visibility' => 'public',
         ],
 

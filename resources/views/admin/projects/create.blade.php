@@ -44,6 +44,17 @@
                         <label class="custom-file-label" for="customFile">Uploader une image</label>
                         <input name="image" type="file" class="custom-file-input" id="customFile">
                     </div>
+
+                    @foreach($technologies as $technology)
+                    <div class="form-check">
+                      
+                      <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="technology_id" id="" value="{{$technology->id}}">
+                        {{$technology->name}}
+                      </label>
+                      
+                    </div>
+                    @endforeach
                     
                 </div>
                   <button type="submit" class="btn btn-warning">Créer</button>
@@ -54,6 +65,6 @@
     </div>
 @stop
 
-{{-- @push('js')
+@push('js')
 <script src="{{asset('js/lib/bstrp-change-file-input-value.js')}}"></script>
-@endpush --}}
+@endpush

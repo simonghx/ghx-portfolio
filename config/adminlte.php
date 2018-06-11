@@ -116,7 +116,7 @@ return [
         ],
         [
             'text'        => 'Projets',
-            'url'         => 'admin/projets',
+            'url'         => 'admin/projects',
             'icon'        => 'folder',
             'label'       => 4,
             'label_color' => 'success',

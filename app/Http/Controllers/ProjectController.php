@@ -16,7 +16,7 @@ class ProjectController extends Controller
     {
         $projects = Project::with('clients', 'technologies')->get()->sortByDesc('created_at');
         // $projects = Project::all();
-        return view('admin.projets.index', compact('projects'));
+        return view('admin.projects.index', compact('projects'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projets.create');
+        return view('admin.projects.create');
     }
 
     /**
@@ -41,9 +41,8 @@ class ProjectController extends Controller
         $project->titre = $request->titre;
         $project->desc = $request->desc;
         $project->client_id = 1;
-        // $project->technologies = rand(1,3);
         $project->save();
-        return redirect()->route('projets.index');
+        return redirect()->route('projects.index');
     }
 
     /**
@@ -54,8 +53,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        
-        return view('admin.projets.show', compact('project'));
+        return view('admin.projects.show', compact('project'));
         
     }
 
@@ -67,7 +65,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -79,7 +77,11 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $project->titre = $request->titre;
+        $project->desc = $request->desc;
+        $project->client_id = 1;
+        $project->save();
+        return redirect()->route('projects.show', ['project' => $project->id]);
     }
 
     /**
@@ -90,6 +92,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('projects.index');
     }
 }

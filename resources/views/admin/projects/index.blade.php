@@ -8,7 +8,7 @@
 
 @section('content')
 
-<a name="" id="" class="btn btn-primary" href="{{route('projets.create')}}" role="button">Ajouter un projet</a>
+<a name="" id="" class="btn btn-primary" href="{{route('projects.create')}}" role="button">Ajouter un projet</a>
 
 <div class="row">
   @foreach($projects as $project)
@@ -28,7 +28,7 @@
         {{-- <span class="badge badge-light">{{$project->technologies[0]->nom}}</span> --}}
     </div>
     <div class="card-footer">
-      <a href="{{route('projets.show', ['project' => $project->id])}}" class="btn btn-primary" role="button">Voir</a>
+      <a href="{{route('projects.show', ['project' => $project->id])}}" class="btn btn-primary" role="button">Voir</a>
       </div>
     </div>
     @endforeach

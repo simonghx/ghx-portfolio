@@ -17,8 +17,13 @@
         <p>{{$project->desc}}</p>
       </div>
       <div class="box-footer">
+
+        <h3>{{$project->clients->company}}</h3>
       
-        {{-- <span class="badge badge-dark">{{$project->technologies->nom}}</span> --}}
+        @foreach($project->technologies as $technology)
+          <span class="badge badge-dark">{{$technology->nom}}</span>
+        @endforeach
+        
         
       </div>
     </div>
@@ -29,8 +34,8 @@
         Actions
       </div>
       <div class="box-body">
-        <a name="" id="" class="btn btn-warning" href="{{route('projets.edit',  ['project'=>$project->id])}}" role="button">Modifier</a>
-        <form class="d-inline" action="{{route('projets.destroy',  ['project' =>$project->id])}}" method="POST">
+        <a name="" id="" class="btn btn-warning" href="{{route('projects.edit',  ['project'=>$project->id])}}" role="button">Modifier</a>
+        <form class="d-inline" action="{{route('projects.destroy',  ['project' =>$project->id])}}" method="POST">
           @csrf
           @method('DELETE')
           <button type="submit" class="btn btn-danger"  role="button">Supprimer</button>

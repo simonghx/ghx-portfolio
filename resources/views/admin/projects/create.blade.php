@@ -12,7 +12,7 @@
         <div class="box">
             
             <div class="box-body">
-                <form action="{{route('projets.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('projects.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
 
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"> 
@@ -47,7 +47,7 @@
                     
                 </div>
                   <button type="submit" class="btn btn-warning">Créer</button>
-                    <a name="" id="" class="btn btn-danger" href="{{route('projets.index')}}" role="button">Cancel</a>
+                    <a name="" id="" class="btn btn-danger" href="{{route('projects.index')}}" role="button">Cancel</a>
                 </form>
             </div>
         </div>

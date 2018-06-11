@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Technology;
+// use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTechnology;
 
@@ -96,6 +97,9 @@ class TechnologyController extends Controller
     public function destroy(Technology $technology)
     {
         if($technology->delete()){
+
+             $technology->projects()->detach();
+
             return redirect()->route('technologies.index')->with(["status"=>"success", "message" => 'La technologie a bien été supprimée']);
         } else {
             return redirect()->route('technologies.index')->with(["status"=>"danger", "message" => 'Une erreur est survenue']);

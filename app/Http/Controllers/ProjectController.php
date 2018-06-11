@@ -120,6 +120,11 @@ class ProjectController extends Controller
         $project->client = $request->client;
 
        if ($project->save()){
+            foreach ($request->technologyid as $technology) {
+                $project->technologies()->detach();
+                $project->technologies()->attach($technology);
+            }
+
            return redirect()->route('projects.show', ['project' => $project->id])->with(["status"=>"success", "message" => 'Votre projet a bien été enregistré']);
        } else {
            return redirect()->route('projects.index')->with(["status"=>"danger", "message" => 'Une erreur est survenue, veuillez réessayer plus tard']);

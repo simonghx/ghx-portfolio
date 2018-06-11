@@ -15,10 +15,34 @@
       </div>
       <div class="box-body">
         <p>{{$project->desc}}</p>
+
+        @if($project->image != null)
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Original :</h4>
+                  <img class="img-fluid" src="{{Storage::disk('images')->url($project->image)}}" alt="">
+                  <p>{{Storage::disk('images')->size($project->image)}}</p>
+              </div>
+              <div class="col-md-4">
+                  
+                  <h4>Thumbnail :</h4>
+                  <img class="" src="{{Storage::disk('thumbnails')->url($project->image)}}" alt="">
+                  <p>{{Storage::disk('thumbnails')->size($project->image)}}</p>
+              </div>
+              <div class="col-md-4">
+                  
+                  <h4>Miniature :</h4>
+                  <img class="" src="{{Storage::disk('miniature')->url($project->image)}}" alt="">
+                  <p>{{Storage::disk('miniature')->size($project->image)}}</p>
+              </div>
+          </div>
+          <hr>               
+          
+        @endif
       </div>
       <div class="box-footer">
 
-        <h3>{{$project->clients->company}}</h3>
+        <h3>{{$project->client}}</h3>
       
         @foreach($project->technologies as $technology)
           <span class="badge badge-dark">{{$technology->nom}}</span>
@@ -35,7 +59,7 @@
       </div>
       <div class="box-body">
         <a name="" id="" class="btn btn-warning" href="{{route('projects.edit',  ['project'=>$project->id])}}" role="button">Modifier</a>
-        <form class="d-inline" action="{{route('projects.destroy',  ['project' =>$project->id])}}" method="POST">
+        <form class="d-inline" action="{{route('projects.destroy',  ['project' => $project->id])}}" method="POST">
           @csrf
           @method('DELETE')
           <button type="submit" class="btn btn-danger"  role="button">Supprimer</button>

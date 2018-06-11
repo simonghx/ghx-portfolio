@@ -18,9 +18,11 @@ class CreateProjectsTable extends Migration
             $table->string('titre', 255);
             $table->text('desc');
             $table->string('image',255)->nullable();
-            $table->unsignedInteger('client_id');
+            $table->string('client',255);
+            // $table->unsignedInteger('client_id');
             $table->timestamps();
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->softDeletes();
+            // $table->foreign('client_id')->references('id')->on('clients');
         });
     }
 

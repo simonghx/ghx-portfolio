@@ -50,20 +50,20 @@ return [
 
         'images' => [
             'driver' => 'local',
-            'root' => storage_path('app/images'),
-            'url' => env('APP_URL').'/storage/images',
+            'root' => storage_path('app/public/images/'),
+            'url' => env('APP_URL').'/storage/images/',
             'visibility' => 'public',
         ],
         'thumbnails' => [
             'driver' => 'local',
-            'root' => storage_path('app/thumbnails'),
-            'url' => env('APP_URL').'/storage/thumbnails',
+            'root' => storage_path('app/public/thumbnails/'),
+            'url' => env('APP_URL').'/storage/thumbnails/',
             'visibility' => 'public',
         ],
         'miniature' => [
             'driver' => 'local',
-            'root' => storage_path('app/miniature'),
-            'url' => env('APP_URL').'/storage/miniature',
+            'root' => storage_path('app/public/miniature/'),
+            'url' => env('APP_URL').'/storage/miniature/',
             'visibility' => 'public',
         ],
 

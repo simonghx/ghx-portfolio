@@ -21,7 +21,7 @@
 
         <hr>
 
-        <h5>{{$project->clients->company}}</h5>
+        <h5>{{$project->client}}</h5>
         @foreach($project->technologies as $technology)
           <span class="badge badge-light">{{$technology->nom}}</span>
         @endforeach

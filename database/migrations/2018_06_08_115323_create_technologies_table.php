@@ -17,6 +17,7 @@ class CreateTechnologiesTable extends Migration
             $table->increments('id');
             $table->string('nom', 255);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -11,13 +11,13 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Client::class,10)->create()->each(function($client){
-            $client->projects()->save(factory(App\Project::class)->make());
-        });
+        // factory(App\Client::class,10)->create()->each(function($client){
+        //     $client->projects()->save(factory(App\Project::class)->make());
+        // });
 
         
-       $projects = App\Project::all();
-       $projects->each(function($project){
+    //    $projects = App\Project::all();
+       factory(App\Project::class,10)->create()->each(function($project){
            $project->technologies()->attach(rand(1,3));
        });
     }

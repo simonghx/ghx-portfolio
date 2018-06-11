@@ -121,6 +121,12 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'Technologies',
+            'url'         => 'admin/technologies',
+            'icon'        => 'laptop',
+            
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',

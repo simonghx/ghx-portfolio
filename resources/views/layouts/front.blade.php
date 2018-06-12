@@ -61,9 +61,9 @@
     <script src="{{asset('theme/js/plugins/jquery.simple-text-rotator.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.backstretch.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.singlePageNav.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('theme/js/plugins/jquery.validate.min.js')}}" type="text/javascript"></script>
+    {{-- <script src="{{asset('theme/js/plugins/jquery.validate.min.js')}}" type="text/javascript"></script> --}}
     <script src="{{asset('theme/js/send-subscribe.js')}}" type="text/javascript"></script>
-    <script src="{{asset('theme/js/contact-form.js')}}" type="text/javascript"></script>
+    {{-- <script src="{{asset('theme/js/contact-form.js')}}" type="text/javascript"></script> --}}
     <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script>
 
 

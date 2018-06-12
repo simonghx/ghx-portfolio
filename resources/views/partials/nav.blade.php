@@ -4,7 +4,7 @@
 
           <!-- Logo -->
           <div class="logo">
-              <a href="#">
+              <a href="{{route('main')}}">
                   <img class="logo-dark" src="{{asset('theme/img/logo-dark.png')}}" alt="Apollo" />
               </a>
           </div>
@@ -20,19 +20,19 @@
           <div class="nav-menu singlepage-nav">
               <ul class="nav-menu-inner">
                   <li>
-                      <a class="current" href="#intro">Home</a>
+                      <a class="current" href="/#intro">Home</a>
                   </li>
                   <li>
-                      <a href="#about">About</a>
+                      <a href="/#about">About</a>
                   </li>
                   <li>
-                      <a href="#portfolio">Portfolio</a>
+                      <a href="/#portfolio">Portfolio</a>   
                   </li>
                   <li>
-                      <a href="#service">Service</a>
+                      <a href="/#service">Service</a>
                   </li>
                   <li>
-                      <a href="#contact-us">Contact</a>
+                      <a href="/#contact-us">Contact</a>
                   </li>
 
               </ul>

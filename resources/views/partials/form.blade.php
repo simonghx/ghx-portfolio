@@ -7,7 +7,7 @@
         <!-- Contact form -->
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form action="" id="contact" class="contact-form row" role="form" method="POST">
+                <form action="{{route('backHome')}}" id="contact" class="contact-form row" role="form" method="POST">
                         @csrf
 
                         <div class="col-md-12 text-center">
@@ -21,29 +21,29 @@
 
                         <div class="col-md-6">
                             <div class="form-field-wrapper">
-                                <input class="input-lg form-full input-fancy" id="form-name" type="text" name="form-name" placeholder="Your Name" required />
+                                <input class="input-lg form-full input-fancy" id="form-name" type="text" name="name" placeholder="Your Name" required />
                             </div>
 
 
                         </div>
                         <div class="col-md-6">
                             <div class="form-field-wrapper">
-                                <input class="input-lg form-full input-fancy" id="form-email" type="email" name="form-email" placeholder="Email" required />
+                                <input class="input-lg form-full input-fancy" id="form-email" type="email" name="email" placeholder="Email" required />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-field-wrapper">
-                                <input class="input-lg form-full input-fancy" id="form-subject" type="text" name="form-subject" placeholder="Subject" />
+                                <input class="input-lg form-full input-fancy" id="form-subject" type="text" name="subject" placeholder="Subject" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-field-wrapper">
-                                <textarea class="home-contact-txt-msg input-lg form-full input-fancy" id="form-message" rows="7" name="form-message" placeholder="Your Message" required></textarea>
+                                <textarea class="home-contact-txt-msg input-lg form-full input-fancy" id="form-message" rows="7" name="message" placeholder="Your Message" required></textarea>
                             </div>
 
                         </div>
                         <div class="col-md-12">
-                            <button class="btn-contact-submit btn btn-lg btn-black" type="submit" id="form-submit" name="submit">Send Message</button>
+                            <button class="btn-contact-submit btn btn-lg btn-black" type="submit" >Send Message</button>
                         </div>
 
                     </form>

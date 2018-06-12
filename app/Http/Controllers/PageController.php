@@ -15,8 +15,8 @@ class PageController extends Controller
         return view('index', compact('projects'));
     }
 
-    public function modal(){
-
+    public function modal(Project $project){
+        return view('front.modal', compact('project'));
     }
 
     public function contactForm(){

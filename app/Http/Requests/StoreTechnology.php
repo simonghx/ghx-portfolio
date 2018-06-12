@@ -25,6 +25,7 @@ class StoreTechnology extends FormRequest
     {
         return [
             'nom' => 'required|max:255',
+            'slug' => 'required|max:255',
         ];
     }
 
@@ -36,8 +37,8 @@ class StoreTechnology extends FormRequest
     public function messages()
     {
         return [
-            'nom.required' => 'Le champ :attribute est requis',
-            'nom.max' => 'Le champ :attribute est limité à :max caractères',
+            'required' => 'Le champ :attribute est requis',
+            'max' => 'Le champ :attribute est limité à :max caractères',
         ];
     }
 }

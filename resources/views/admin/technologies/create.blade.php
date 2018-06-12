@@ -22,6 +22,14 @@
               <input type="text" name="nom" id="" class="form-control" placeholder="" value="{{old('nom')}}">
               
             </div>
+            <div class="form-group">
+              <label for="">Slug de la technologie :</label>
+              @if($errors->has('slug'))
+                <div class="text-danger">{{$errors->first('slug')}}</div>
+              @endif
+              <input type="text" name="slug" id="" class="form-control" placeholder="" value="{{old('slug')}}">
+              
+            </div>
             <button type="submit" class="btn btn-success">Enregistrer</button>
             <a name="" id="" class="btn btn-danger" href="{{route('technologies.index')}}" role="button">Cancel</a>
           </form>

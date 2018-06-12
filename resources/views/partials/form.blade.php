@@ -7,7 +7,9 @@
         <!-- Contact form -->
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                    <form id="contact" class="contact-form row" role="form">
+                <form action="" id="contact" class="contact-form row" role="form" method="POST">
+                        @csrf
+
                         <div class="col-md-12 text-center">
                             <h5 class="successContent">
                                 <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been sent successfully.

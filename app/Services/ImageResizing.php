@@ -14,13 +14,13 @@ class ImageResizing {
     $image->store('','thumbnails');
     $image->store('','miniature');
     // create instance
-    $thumbnail = Image::make(Storage::disk('thumbnails')->path($imageName))->resize(300, null, function ($constraint) {
-        $constraint->aspectRatio();
+    $thumbnail = Image::make(Storage::disk('thumbnails')->path($imageName))->resize(300, 300, function ($constraint) {
+        // $constraint->aspectRatio();
         $constraint->upsize();
     });  
 
-    $miniature = Image::make(Storage::disk('miniature')->path($imageName))->resize(100, null, function ($constraint) {
-        $constraint->aspectRatio();
+    $miniature = Image::make(Storage::disk('miniature')->path($imageName))->resize(100, 100, function ($constraint) {
+        // $constraint->aspectRatio();
         $constraint->upsize();
     });           
   

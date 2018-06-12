@@ -17,6 +17,7 @@
         <h5>{{$project->titre}}</h5>
       </div>
       <div class="card-body">
+        <img src="{{Storage::disk('miniature')->url($project->image)}}" alt="">
         <p class="card-text">{{$project->desc}}</p>
 
         <hr>

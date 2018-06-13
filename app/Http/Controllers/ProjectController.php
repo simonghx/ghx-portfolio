@@ -120,8 +120,8 @@ class ProjectController extends Controller
         $project->client = $request->client;
 
        if ($project->save()){
+            $project->technologies()->detach();
             foreach ($request->technologyid as $technology) {
-                $project->technologies()->detach();
                 $project->technologies()->attach($technology);
             }
 

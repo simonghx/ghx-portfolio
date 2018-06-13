@@ -20,7 +20,7 @@
           <div class="nav-menu singlepage-nav">
               <ul class="nav-menu-inner">
                   <li>
-                      <a class="current" href="/#intro">Home</a>
+                      <a class="current" href="{{route('main')}}/#intro">Home</a>
                   </li>
                   <li>
                       <a href="/#about">About</a>

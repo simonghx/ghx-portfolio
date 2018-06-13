@@ -1,17 +1,17 @@
-(function ($) {
+(function($) {
 
-    "use strict";
+    // "use strict";
 
     $("#contact").validate({
-        errorPlacement: function () {
-            return false;  // suppresses error message text
+        errorPlacement: function() {
+            return false; // suppresses error message text
         }
     });
-    
+
     /* =================================
     ===  CONTACT FORM               ====
     =================================== */
-    $("#contact").submit(function (e) {
+    $("#contact").submit(function(e) {
         e.preventDefault();
         var name = $("#form-name").val();
         var email = $("#form-email").val();
@@ -24,20 +24,19 @@
             return pattern.test(emailAddress);
         };
 
-      
+
 
         if (validEmail(email) && (message.length > 1) && (name.length > 1)) {
             $.ajax({
                 type: "POST",
                 url: "send-mail.php",
                 data: dataString,
-                success: function () {
+                success: function() {
                     $('.successContent').fadeIn(1000);
                     $('.errorContent').fadeOut(500);
                 }
             });
-        }
-        else {
+        } else {
             $('.errorContent').fadeIn(1000);
             $('.successContent').fadeOut(500);
         }
@@ -46,7 +45,5 @@
 
 
 
-  
+
 })(jQuery);
-
-

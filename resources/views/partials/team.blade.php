@@ -77,71 +77,7 @@
                       </div>
                   </div>
 
-                  <div class="item">
-                      <div class="team-item">
-                          <div class="team-item-img">
-                              <img src="img/team/04.jpg" alt="" />
-                              <div class="team-item-detail">
-                                  <div class="team-item-detail-inner light-color">
-                                      <ul class="social">
-                                          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                          <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                          <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-                                          <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="team-item-info">
-                              <h5 class="alt-title">Michael Lee</h5>
-                              <p>Web Developer</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="item">
-                      <div class="team-item">
-                          <div class="team-item-img">
-                              <img src="img/team/05.jpg" alt="" />
-                              <div class="team-item-detail">
-                                  <div class="team-item-detail-inner light-color">
-                                      <ul class="social">
-                                          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                          <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                          <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-                                          <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="team-item-info">
-                              <h5 class="alt-title">Mitchell KAPPOS</h5>
-                              <p class="">Graphic Designer</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="item">
-                      <div class="team-item">
-                          <div class="team-item-img">
-                              <img src="img/team/06.jpg" alt="" />
-                              <div class="team-item-detail">
-                                  <div class="team-item-detail-inner light-color">
-                                      <ul class="social">
-                                          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                          <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                          <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-                                          <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="team-item-info">
-                              <h5 class="alt-title">Leonardo da Vinci</h5>
-                              <p class="">Front-End Dev</p>
-                          </div>
-                      </div>
-                  </div>
+                  
 
               </div>
               <!--End Team Carousel -->

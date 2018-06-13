@@ -35,7 +35,7 @@
               </div>
               <!-- Image Mockup -->
               <div class="col-md-4 hidden-sm hidden-xs text-center wow fadeInUp">
-                  <img alt="" src="img/mockup/mockup01.png" style="width: 100%; max-width: 320px;">
+                  <img alt="" src="{{asset('theme/img/mockup/mockup01.png')}}" style="width: 100%; max-width: 320px;">
               </div>
               <!-- End Image Mockup -->
               <div class="col-md-4 col-sm-6 pt-60 pt-sm-0 wow fadeInRight">

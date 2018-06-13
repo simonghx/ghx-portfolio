@@ -1,5 +1,5 @@
 <!-- Counter Section -->
-  <section id="counter" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4" data-background-img="img/full/14.jpg">
+  <section id="counter" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4" data-background-img="{{asset('theme/img/full/14.jpg')}}">
       <!-- page triangle shape -->
       <div class="page-triangle white-bg"></div>
       <!-- End page triangle shape -->

@@ -13,9 +13,9 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
     <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/img/favicon.ico')}}" />
+    <link rel="icon" type="image/png" href="{{asset('theme/img/favicon.png')}}" />
+    <link rel="apple-touch-icon" href="{{asset('theme/img/favicon.png')}}" />
 
     <!-- Css -->
     <link href="{{asset('/css/app.css')}}" rel="stylesheet" type="text/css" />
@@ -54,7 +54,7 @@
     <script src="{{asset('theme/js/plugins/isotope.pkgd.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.stellar.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.fitvids.js')}}" type="text/javascript"></script>
-    {{-- <script src="{{asset('theme/js/plugins/jquery.magnific-popup.min.js')}}" type="text/javascript"></script> --}}
+    <script src="{{asset('theme/js/plugins/jquery.magnific-popup.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.appear.js')}}" type="text/javascript"></script>
     <script src="{{asset('theme/js/plugins/jquery.countTo.js')}}" type="text/javascript"></script>
     {{-- <script src="{{asset('theme/js/plugins/jquery.mb.YTPlayer.min.js')}}" type="text/javascript"></script> --}}
@@ -64,7 +64,9 @@
     {{-- <script src="{{asset('theme/js/plugins/jquery.validate.min.js')}}" type="text/javascript"></script> --}}
     {{-- <script src="{{asset('theme/js/send-subscribe.js')}}" type="text/javascript"></script> --}}
     {{-- <script src="{{asset('theme/js/contact-form.js')}}" type="text/javascript"></script> --}}
-    <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('theme/js/test.js')}}" type="text/javascript"></script>
+    {{-- <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script> --}}
 
 
 </body>

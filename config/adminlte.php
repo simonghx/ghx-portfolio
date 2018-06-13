@@ -118,13 +118,29 @@ return [
             'text'        => 'Projets',
             'url'         => 'admin/projects',
             'icon'        => 'folder',
-            'label'       => 4,
-            'label_color' => 'success',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ],
         [
             'text'        => 'Technologies',
             'url'         => 'admin/technologies',
             'icon'        => 'laptop',
+            
+        ],
+        [
+            'text'        => 'Content',
+            'url'         => 'admin/content',
+            'icon'        => 'file',
+            'submenu' => [
+                [
+                    'text' => 'Intro',
+                    'url'  => 'admin/content/intro',
+                ],
+                [
+                    'text' => 'About',
+                    'url'  => 'admin/content/about',
+                ],
+            ],
             
         ],
         'ACCOUNT SETTINGS',

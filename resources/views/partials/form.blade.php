@@ -10,14 +10,14 @@
                 <form action="{{route('backHome')}}" id="contact" class="contact-form row" role="form" method="POST">
                         @csrf
 
-                        {{-- <div class="col-md-12 text-center">
+                        <div class="col-md-12 text-center">
                             <h5 class="successContent">
                                 <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been sent successfully.
                             </h5>
                             <h5 class="errorContent" style="color: #e1534f;">
                                 <i class="fa fa-exclamation-circle left"></i>There was a problem validating the form please check!
                             </h5>
-                        </div> --}}
+                        </div>
 
                         <div class="col-md-6">
                             @if($errors->has('name'))

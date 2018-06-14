@@ -1,13 +1,15 @@
 $(function() {
-    "use strict";
+
 
     function a() {
-        $(".scroll-top").click(function() { return $("html, body").animate({ scrollTop: 0 }, 2e3), !1 }), $('.scroll-down[href^="#"], .scroll-to-target[href^="#"]').on("click", function(a) {
-            a.preventDefault();
-            var e = this.hash,
-                i = $(e);
-            $("html, body").stop().animate({ scrollTop: i.offset().top }, 900, "swing", function() { window.location.hash = e })
-        })
+
+        $(".scroll-top").click(function() { return $("html, body").animate({ scrollTop: 0 }, 2e3), !1 }),
+            $('.scroll-down[href^="#"], .scroll-to-target[href^="#"]').on("click", function(a) {
+                a.preventDefault();
+                var e = this.hash,
+                    i = $(e);
+                $("html, body").stop().animate({ scrollTop: i.offset().top }, 900, "swing", function() { window.location.hash = e })
+            })
     }
 
     function e() {
@@ -94,7 +96,18 @@ $(function() {
     v.click(function() { $(this).hasClass("active") ? $(this).hasClass("active") && (v.removeClass("active"), g.removeClass("active"), $("body").removeClass("overlay-menu-active")) : (v.addClass("active"), g.addClass("active"), $("body").addClass("overlay-menu-active")) }), m.click(function() { v.hasClass("active") && g.hasClass("active") && (v.removeClass("active"), g.removeClass("active"), $("body").removeClass("overlay-menu-active")) }), $(".video-fit, .audio-fit, .post-media").fitVids();
     var C;
     C = $(window).width() >= 1024 ? "position" : "transform", $(window).stellar({ responsive: !0, positionProperty: C, horizontalScrolling: !1 }), $(".parallax").each(function() {
-        var a = $(this);
-        $(window).scroll(function() { l(a) }), l(a)
-    }), $(".singlepage-nav").singlePageNav({ offset: 0, currentClass: "current", filter: ":not(.external)", easing: "easeInOutExpo", speed: 1500, updateHash: !0, beforeStart: function() { f.hasClass("active") && (f.removeClass("active"), p.removeClass("active")), v.hasClass("active") && (v.removeClass("active"), g.removeClass("active"), $("body").removeClass("overlay-menu-active")) } })
+
+            var a = $(this);
+
+            $(window).scroll(function() { l(a) }), l(a)
+        }),
+        $(".singlepage-nav").singlePageNav({
+            offset: 0,
+            currentClass: "current",
+            filter: ":not(.external)",
+            speed: 1500,
+            updateHash: !0,
+
+            beforeStart: function() { f.hasClass("active") && (f.removeClass("active"), p.removeClass("active")), v.hasClass("active") && (v.removeClass("active"), g.removeClass("active"), $("body").removeClass("overlay-menu-active")) }
+        })
 });

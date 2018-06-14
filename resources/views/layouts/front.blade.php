@@ -25,15 +25,16 @@
 </head>
 <body class="wow-animate">
 
-    <!-- Site preloader -->
+    {{-- <!-- Site preloader -->
     <section id="preloader">
         <div class="site-spinner"></div>
     </section>
-    <!-- End Site preloader -->
+    <!-- End Site preloader --> --}}
 
     <!-- Page Wraper -->
     <div id="page-wraper">
 
+       
         @include('partials.nav')
 
         @yield('content')
@@ -65,9 +66,9 @@
     {{-- <script src="{{asset('theme/js/send-subscribe.js')}}" type="text/javascript"></script> --}}
     {{-- <script src="{{asset('theme/js/contact-form.js')}}" type="text/javascript"></script> --}}
 
-    <script src="{{asset('theme/js/test.js')}}" type="text/javascript"></script>
-    {{-- <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script> --}}
-
+    {{-- <script src="{{asset('theme/js/test.js')}}" type="text/javascript"></script> --}}
+    <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script>
+    
 
 </body>
 </html>

@@ -13,10 +13,13 @@
     =================================== */
     $("#contact").submit(function(e) {
         e.preventDefault();
+        var token = $("input[name=_token]").val(); // The CSRF token
         var name = $("#form-name").val();
         var email = $("#form-email").val();
         var subject = $("#form-subject").val();
         var message = $("#form-message").val();
+
+
         var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
 
         function validEmail(emailAddress) {
@@ -29,14 +32,17 @@
         if (validEmail(email) && (message.length > 1) && (name.length > 1)) {
             $.ajax({
                 type: "POST",
-                url: "send-mail.php",
+                // url: "send-mail.php",
+                url: "/contact",
                 data: dataString,
-                success: function() {
+                success: function(e) {
+
                     $('.successContent').fadeIn(1000);
                     $('.errorContent').fadeOut(500);
                 }
             });
         } else {
+
             $('.errorContent').fadeIn(1000);
             $('.successContent').fadeOut(500);
         }

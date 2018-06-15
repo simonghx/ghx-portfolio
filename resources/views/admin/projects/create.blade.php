@@ -64,7 +64,7 @@
                     <div class="form-check my-2">
                     
                     <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="technologyid[]" id="" value="{{$technology->id}}">
+                        <input type="checkbox" class="form-check-input" name="technologyid[]" id="" value="{{$technology->id}}" {{ ( is_array(old('technologyid')) && in_array($technology->id, old('technologyid')) ) ? 'checked ' : '' }}>
                         {{$technology->nom}}
                     </label>
                     

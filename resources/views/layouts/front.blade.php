@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="{{asset('theme/img/favicon.png')}}" />
 
     <!-- Css -->
-    <link href="{{asset('/css/app.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('theme/css/style.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('theme/css/bootstrap.css')}}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{asset('theme/css/bootstrap.css')}}" rel="stylesheet" type="text/css" /> --}}
     <link href="{{asset('theme/css/plugins/animate.css')}}" rel="stylesheet" type="text/css" />
 </head>
 <body class="wow-animate">
@@ -68,6 +68,7 @@
 
     {{-- <script src="{{asset('theme/js/test.js')}}" type="text/javascript"></script> --}}
     <script src="{{asset('theme/js/theme.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
     
 
 </body>

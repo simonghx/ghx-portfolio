@@ -27,8 +27,6 @@ class PageController extends Controller
     }
 
     public function contactForm(ContactRequest $request){
-
-        //$request->validated();
         
             event(new Contact($request));        
             return redirect()->route('main');

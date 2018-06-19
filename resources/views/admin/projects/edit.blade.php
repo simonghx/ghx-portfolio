@@ -68,12 +68,13 @@
                     @endif
                     @foreach($technologies as $technology)
                     <div class="form-check my-2">
-                    
+                     
                     <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="technologyid[]" id="" value="{{$technology->id}}" @foreach($project->technologies as $tech){{old('technologyid', ( $tech->id == $technology->id) ? 'checked':'')}} @endforeach>
+                        <input type="checkbox" class="form-check-input" name="technologyid[]" id="" value="{{$technology->id}}" @foreach(old('technologyid', $project->technologies) as $tech){{ $tech == $technology->id ? 'checked':''}} @endforeach>
                         {{$technology->nom}}
                     </label>
                     
+                     
                     </div>
                     @endforeach
                 </div>

@@ -141,7 +141,7 @@ class ProjectController extends Controller
     {  
         if($project->delete()) {
 
-            $project->technologies()->detach();
+            $project->technologies()->detach(); 
 
             if($project->image != null) {
                 $this->imageResizing->imageDelete($project->image);

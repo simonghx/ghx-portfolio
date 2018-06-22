@@ -60,11 +60,11 @@ class ProjectController extends Controller
         
         
         if ($project->save()){
-            foreach ($request->technologyid as $technology) {
+            foreach($request->technologyid as $technology) {
                 $project->technologies()->attach($technology);
             }
 
-            return redirect()->route('projects.show', ['project' => $project->id])->with(["status"=>"success", "message" => 'Votre projet a bien été enregistré']);
+            return redirect()->route('projects.index')->with(["status"=>"success", "message" => 'Votre projet a bien été enregistré']);
 
         } else {
             return redirect()->route('projects.index')->with(["status"=>"danger", "message" => 'Une erreur est survenue, veuillez réessayer plus tard']);
@@ -84,7 +84,6 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         return view('admin.projects.show', compact('project'));
-        
     }
 
     /**
